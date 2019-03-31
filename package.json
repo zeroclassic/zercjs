@@ -1,0 +1,36 @@
+{
+  "name": "btczjs",
+  "version": "v1.0.0",
+  "description": "BitcoinZ javascript library",
+  "main": "./lib/index.js",
+  "repository": "https://github.com/anthony19114/btczjs.git",
+  "author": "Kendrick Tan <kendricktan0814@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bigi": "^1.4.2",
+    "bs58": "^4.0.1",
+    "bs58check": "^2.1.2",
+    "create-hash": "^1.2.0",
+    "create-hmac": "^1.1.7",
+    "int64-buffer": "^0.1.9",
+    "libsodium-sumo": "^0.7.4",
+    "libsodium-wrappers-sumo": "^0.7.4",
+    "safe-buffer": "^5.1.2",
+    "secp256k1": "^3.6.2",
+    "varuint-bitcoin": "^1.1.0"
+  },
+  "scripts": {
+    "build": "babel src/ -d lib/",
+    "watch-build": "babel --watch src/ -d lib/",
+    "cleanup": "rm -rf ./lib && mkdir lib",
+    "prepublic": "yarn run build",
+    "test": "mocha"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-flow": "^6.23.0",
+    "chai": "^4.2.0",
+    "flow-bin": "^0.95.1",
+    "mocha": "^6.0.2"
+  }
+}
